@@ -6,6 +6,8 @@ An example application is created in Unity. We make a standard VR application in
 
 The script first calculates the angle between the lines orientation and the controllers orientation. It then uses that angle multiplied by an "angleMultiplier" variable to get the smoothing value for the line. Then it changes the lines rotation using Quaternion.Lerp so that it smoothly turns towards the controller. It also updates the lines position, smoothing can also be applied here if needed.
 
+The value that the user will likely want to control is the angleMultiplier, similar to a sensitivity setting it controls how quickly the line follows your controllers orientation. 
+
     void Update() {
         float smoothing; 
         
