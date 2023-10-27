@@ -10,21 +10,21 @@ Tämä minimoi käden mikroliikkeiden vaikutuksen osoittimeen ja tekee siitä va
 
     void MoveLine()
     {
-    float smoothing; // Viivan tasauksen vahvuuteen käytettävä muuttuja
+        float smoothing; // Viivan tasauksen vahvuuteen käytettävä muuttuja
 
-    // Lasketaan tämänhetkinen kulma laserosoittimen ja käyttäjän ohjaimen välillä
-    float theAngle = Quaternion.Angle(Line.rotation, xrController.transform.rotation;
+        // Lasketaan tämänhetkinen kulma laserosoittimen ja käyttäjän ohjaimen välillä
+        float theAngle = Quaternion.Angle(Line.rotation, xrController.transform.rotation;
         
-    // Lasketaan smoothing arvo. AngleMultiplier on Unity editorissa käytettävä arvo,
-    // jolla viivan kääntymisnopeuden voi määrittää sopivaksi itselle.
-    // Tätä arvoa käyttäjä haluaa luultavimmin itse kontrolloida
-    // ikään kuin hiiren herkkyyttä.
-    smoothing = angleMultiplier * Mathf.Pow(theAngle, AnglePower) + angleOffset;
-
-    // Estetään viivan liian nopea kääntyminen
-    if (smoothing > maxLineRotation) smoothing = maxLineRotation;
-
-    // Käännetään viivaa Quaternion.Lerp komennon avulla kohti ohjaimen senhetkistä asentoa, käyttäen smoothing arvoa.
-    Line.rotation = Quaternion.Lerp(Line.rotation,
-    xrController.transform.rotation, smoothing * Time.deltaTime);
+        // Lasketaan smoothing arvo. AngleMultiplier on Unity editorissa käytettävä arvo,
+        // jolla viivan kääntymisnopeuden voi määrittää sopivaksi itselle.
+        // Tätä arvoa käyttäjä haluaa luultavimmin itse kontrolloida
+        // ikään kuin hiiren herkkyyttä.
+        smoothing = angleMultiplier * Mathf.Pow(theAngle, AnglePower) + angleOffset;
+    
+        // Estetään viivan liian nopea kääntyminen
+        if (smoothing > maxLineRotation) smoothing = maxLineRotation;
+    
+        // Käännetään viivaa Quaternion.Lerp komennon avulla kohti ohjaimen senhetkistä asentoa, käyttäen smoothing arvoa.
+        Line.rotation = Quaternion.Lerp(Line.rotation,
+        xrController.transform.rotation, smoothing * Time.deltaTime);
     }
