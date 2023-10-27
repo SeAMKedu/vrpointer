@@ -1,4 +1,4 @@
-## Creating a Reliable Pointer for Virtual Reality Applications.
+## Creating a reliable pointer for virtual reality applications.
 
 A common user interface style in VR applications is a laser pointer that you use to click buttons. Current VR devices offer highly precise hand tracking, including micro-movements and vibrations. This precision can cause issues such as pointer instability. To address this, we developed an algorithm that filters hand movement, making pointer usage more reliable. Hand movements in 3D space are generally smooth, but the instability in hand orientation across different axes is problematic and we wish to filter that.
 
