@@ -1,5 +1,7 @@
 ## Creating a reliable pointer for virtual reality applications.
 
+Note: This is a Unity project using version 2021.3.16f1.
+
 A common user interface style in VR applications is a laser pointer that you use to click buttons. Current VR devices offer highly precise hand tracking, including micro-movements and vibrations. This precision can cause issues such as pointer instability. To address this, we developed an algorithm that filters hand movement, making pointer usage more reliable. Hand movements in 3D space are generally smooth, but the instability in hand orientation across different axes is problematic and we wish to filter that.
 
 An example application is created in Unity. We make a standard VR application in Unity using OpenXR and XR interaction toolkit. We spawn the standard XR Origin (action based). Then we spawn two new game objects under the XR Origin called Line_Left and Line_Right. We make a simple script for those objects that just draw a line forward using a raycast. The controllers have the script that we care about. The script is called LineController.
