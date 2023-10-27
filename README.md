@@ -27,7 +27,7 @@ The value that the user will likely want to control is the angleMultiplier, simi
 
 
 
-Created by
-Sakari Pollari
-Expert, R&D
-SeAMK
+Created by  
+Sakari Pollari  
+Expert, R&D  
+SeAMK  
