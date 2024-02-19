@@ -1,3 +1,5 @@
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.10677572.svg)](https://doi.org/10.5281/zenodo.10677572)
+
 ## Creating a reliable pointer for virtual reality applications.
 
 Note: This is a Unity project using version 2021.3.16f1.
